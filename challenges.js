@@ -49,4 +49,27 @@ console.log(boutique)
 let statut= boutique.ouverte ? "Ouvert" : "Fermée";
 console.log(statut)
 
+// mettre à jour un inventaire
+let copieProduit=[...produits];
+console.log(copieProduit)
+// Affiche nom ,stock
+copieProduit.forEach((Element)=>{
+    console.log(`Nom de produit est:${Element.nom} pour le Stock de produit est:${Element.stock}`)
+})
+copieProduit.forEach((produit)=>{
+    produit.nom=="Stylo" ? produit.stock=6 : produit.stock;
+})
 
+//Ajouter Gomme
+copieProduit.push({ id: 106, nom: "Gomme", categorie: "Papeterie",
+prix: 5, stock: 8 })
+
+//Rerire Sac
+copieProduit.forEach((produit)=>{
+ 
+  if(produit.id===104){
+ copieProduit.splice(copieProduit.indexOf(produit),1)
+
+}
+})
+console.log(copieProduit)
