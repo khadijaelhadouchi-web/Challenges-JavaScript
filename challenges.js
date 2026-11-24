@@ -49,7 +49,7 @@ console.log(boutique)
 let statut= boutique.ouverte ? "Ouvert" : "Fermée";
 console.log(statut)
 
-// mettre à jour un inventaire
+// // mettre à jour un inventaire
 let copieProduit=[...produits];
 console.log(copieProduit)
 // Affiche nom ,stock
@@ -73,3 +73,13 @@ copieProduit.forEach((produit)=>{
 }
 })
 console.log(copieProduit)
+//Sélection et calcul 
+//Sélectionner les produits en rayon
+console.log("Challenge 4") 
+
+ const produitSup=produits.filter(produit=>produit.stock>0)
+ 
+ console.log( produitSup)
+ const produitCatég=produitSup.filter(p=>p.categorie=="Papeterie")
+
+ console.log(produitCatég)
