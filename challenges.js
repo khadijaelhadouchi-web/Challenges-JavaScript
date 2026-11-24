@@ -1,9 +1,5 @@
 const categories = ["Papeterie", "Accessoires", "Sacs"];
-const boutique = {
-nom: "Stock & Fournitures",
-ville: "Youssoufia",
-ouverte: true
-};
+
 const produits = [
 { id: 101, nom: "Cahier", categorie: "Papeterie",
 prix: 20, stock: 5 },
@@ -29,3 +25,28 @@ categories[1]="Bureau";
 categories.splice(categories.length-1,1)
 // Tablequ final 
 console.log(categories)
+// 02.Mettre la boutique à jour 
+const boutique = {
+nom: "Stock & Fournitures",
+ville: "Youssoufia",
+ouverte: true
+};
+console.log(` Le nom de la boutiue est:${boutique.nom}`);
+console.log(` La ville de la boutiue est:${boutique.ville}`);
+// Ajouter la propriété
+boutique.devise="MAD"
+// Ouvert=false
+boutique.ouverte=false
+console.log(boutique)
+// if raccourci
+// let statut;
+// if(boutique.ouverte){
+//     statut="Ouvert"
+// }else{
+//     statut="Fermée"
+// }
+// opérateur ternaire
+let statut= boutique.ouverte ? "Ouvert" : "Fermée";
+console.log(statut)
+
+
