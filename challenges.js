@@ -16,3 +16,16 @@ prix: 120, stock: 2 },
 { id: 105, nom: "Classeur", categorie: "Papeterie",
 prix: 30, stock: 4 }
 ];
+// Tableaux et Objets
+// 01.Organiser les catégories
+console.log(`La premiére catégorie est:${categories[0]}`);
+console.log(`Le nombre initial de catégories est:${categories.length}`)
+//ajoute << classement>>
+categories.push("Classement")
+// Remplaces <<Accessoires>>
+categories[1]="Bureau";
+// Retire derniére 
+
+categories.splice(categories.length-1,1)
+// Tablequ final 
+console.log(categories)
