@@ -125,4 +125,10 @@ const tousPro= produits.every(p => p.prix > 0 );
 console.log(tousPro)
 const tousStk= produits.every(p => p.stock > 0 );
 console.log(tousStk)
-
+// Produire un bilan 
+const produitPapeterie=produits.filter(p=>p.categorie=="Papeterie")
+console.log(produitPapeterie)
+const nomPapeterie=produitPapeterie.map(p=>p.nom)
+console.log(nomPapeterie)
+const valeurTotale=produitPapeterie.reduce((total,p)=>total+(p.prix*p.stock),0)
+console.log(`${valeurTotale}DH`)
