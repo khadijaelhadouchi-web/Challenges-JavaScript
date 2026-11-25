@@ -117,3 +117,6 @@ const id103=produits.findIndex(p=>p.id==103)
 console.log(id103)
 const id999=produits.findIndex(p=>p.id==999)
 console.log(id999)
+//Détecter une rupture 
+const auMoins=produits.some(p=>p.stock==0)
+console.log(auMoins)
