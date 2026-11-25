@@ -60,7 +60,9 @@ let statut = boutique.ouverte ? "Ouvert" : "Fermée";
 console.log(statut)
 
 // // mettre à jour un inventaire
-let copieProduit = [...produits];
+let copieProduit = [];
+//spread pour chaque objet
+produits.forEach(produit=>copieProduit.push({...produit}))
 console.log(copieProduit)
 // Affiche nom ,stock
 copieProduit.forEach((Element) => {
@@ -88,6 +90,7 @@ console.log(copieProduit)
 //Sélection et calcul 
 //Sélectionner les produits en rayon
 console.log("Challenge 4")
+console.log(produits)
 const produitSup = produits.filter(produit => produit.stock > 0)
 console.log(produitSup)
 const produitCatég = produitSup.filter(p => p.categorie == "Papeterie")
@@ -97,3 +100,8 @@ const uniqueNoms=produits.map(p=>p.nom)
 console.log(uniqueNoms)
 const  secondTab=produits.map(p=>`${p.nom}-${p.prix}DH`)
 console.log(secondTab)
+//Calculer les totaux
+const total=produits.reduce((total,p)=>total+p.stock,0)
+console.log(total)
+const valeurStock=produits.reduce((total,p)=>total+(p.stock*p.prix),0)
+console.log(valeurStock)
