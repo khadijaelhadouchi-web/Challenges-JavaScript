@@ -62,7 +62,7 @@ console.log(statut)
 // // mettre à jour un inventaire
 let copieProduit = [];
 //spread pour chaque objet
-produits.forEach(produit=>copieProduit.push({...produit}))
+produits.forEach(produit => copieProduit.push({ ...produit }))
 console.log(copieProduit)
 // Affiche nom ,stock
 copieProduit.forEach((Element) => {
@@ -96,27 +96,33 @@ console.log(produitSup)
 const produitCatég = produitSup.filter(p => p.categorie == "Papeterie")
 console.log(produitCatég)
 //Préparer les étiquettes 
-const uniqueNoms=produits.map(p=>p.nom)
+const uniqueNoms = produits.map(p => p.nom)
 console.log(uniqueNoms)
-const  secondTab=produits.map(p=>`${p.nom}-${p.prix}DH`)
+const secondTab = produits.map(p => `${p.nom}-${p.prix}DH`)
 console.log(secondTab)
 //Calculer les totaux
-const total=produits.reduce((total,p)=>total+p.stock,0)
+const total = produits.reduce((total, p) => total + p.stock, 0)
 console.log(total)
-const valeurStock=produits.reduce((total,p)=>total+(p.stock*p.prix),0)
+const valeurStock = produits.reduce((total, p) => total + (p.stock * p.prix), 0)
 console.log(valeurStock)
 //Controles et défi final
 //Retruver un produit
 //find
-const produitId103=produits.find(p=>p.id==103);
+const produitId103 = produits.find(p => p.id == 103);
 console.log(produitId103)
-const produitId999=produits.find(p=>p.id==999)
+const produitId999 = produits.find(p => p.id == 999)
 console.log(produitId999)
 //findIndex
-const id103=produits.findIndex(p=>p.id==103)
+const id103 = produits.findIndex(p => p.id == 103)
 console.log(id103)
-const id999=produits.findIndex(p=>p.id==999)
+const id999 = produits.findIndex(p => p.id == 999)
 console.log(id999)
 //Détecter une rupture 
-const auMoins=produits.some(p=>p.stock==0)
+const auMoins = produits.some(p => p.stock == 0)
 console.log(auMoins)
+// Controler 
+const tousPro= produits.every(p => p.prix > 0 );
+console.log(tousPro)
+const tousStk= produits.every(p => p.stock > 0 );
+console.log(tousStk)
+
