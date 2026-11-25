@@ -105,3 +105,15 @@ const total=produits.reduce((total,p)=>total+p.stock,0)
 console.log(total)
 const valeurStock=produits.reduce((total,p)=>total+(p.stock*p.prix),0)
 console.log(valeurStock)
+//Controles et défi final
+//Retruver un produit
+//find
+const produitId103=produits.find(p=>p.id==103);
+console.log(produitId103)
+const produitId999=produits.find(p=>p.id==999)
+console.log(produitId999)
+//findIndex
+const id103=produits.findIndex(p=>p.id==103)
+console.log(id103)
+const id999=produits.findIndex(p=>p.id==999)
+console.log(id999)
